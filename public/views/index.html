@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="favApp">
   <head>
     <meta charset="utf-8">
-    <title>Giphy Weekend Challenge</title>
+    <title>Giphy Weekend Challenge</title
+
     <script src="/assets/vendors/angular.min.js"></script>
     <script src="/assets/vendors/angular-route.js"></script>
     <script src="/assets/vendors/jquery.min.js"></script>
+    
+    <script src="/scripts/fav.module.js"></script>
+    <script src="/scripts/fav.config.js"></script>
 
     <link rel="stylesheet" href="/assets/vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="/styles/styles.css" />
 
+    <base href="/" />
   </head>
 
   <body>
@@ -21,15 +26,17 @@
           <h1 class="title">The Great Gif Collection</h1>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Favorites</a><span> Total: </span></li>
+          <li class="active"><a href="/home">Home</a></li>
+          <li><a href="/favorites">Favorites</a><span> Total: </span></li>
           <li><input type="text"/></li>
         </ul>
       </div>
     </nav>
 
     <main>
+      <ng-view>
 
+      </ng-view>
     </main>
 
 
